@@ -28,16 +28,6 @@ public class AntiGL implements ChatReceiveModule {
     private static final String[] cancelGlMessages = {"glhf", "Good Luck", "GL", "Have a good game!", "gl", "Good luck!", "AutoGL By Sk1er"};
 
     @Override
-    public int getPriority() {
-        return 3;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return HytilitiesConfig.antiGL;
-    }
-
-    @Override
     public void onMessageReceived(@NotNull ClientChatReceivedEvent event) {
         String unformattedText = UTextComponent.Companion.stripFormatting(event.message.getUnformattedText());
         for (String glMessage : cancelGlMessages) {
@@ -47,4 +37,15 @@ public class AntiGL implements ChatReceiveModule {
             }
         }
     }
+
+    @Override
+    public int getPriority() {
+        return 3;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return HytilitiesConfig.antiGL;
+    }
+
 }

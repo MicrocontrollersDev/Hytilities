@@ -404,6 +404,13 @@ public class HytilitiesConfig extends Vigilant {
     public static boolean curseOfSpam;
 
     @Property(
+        type = PropertyType.SWITCH, name = "Remove the Skyblock welcome message",
+        description = "Hides the Skyblock welcome message.",
+        category = "Chat", subcategory = "Toggles"
+    )
+    public static boolean skyblockWelcome;
+
+    @Property(
         type = PropertyType.SWITCH, name = "Auto-Complete Play Commands",
         description = "Allows tab completion of /play commands.",
         category = "Chat", subcategory = "AutoComplete"
@@ -416,6 +423,13 @@ public class HytilitiesConfig extends Vigilant {
         category = "Chat", subcategory = "Toggles"
     )
     public static boolean giftBlocker;
+
+    @Property(
+        type = PropertyType.SWITCH, name = "Remove Grinch Gifts Messages",
+        description = "Remove personal and global gifts connected messages.",
+        category = "Chat", subcategory = "Toggles"
+    )
+    public static boolean grinchPresents;
 
     @Property(
         type = PropertyType.TEXT, name = "API Key",
@@ -433,7 +447,7 @@ public class HytilitiesConfig extends Vigilant {
 
     @Property(
         type = PropertyType.SWITCH, name = "Automatically Check GEXP",
-        description = "Automatically check your GEXP after you win a Hypixel game. \\u00a7cRequires an API Key.",
+        description = "Automatically check your GEXP after you win a Hypixel game. \n§4 an API Key.",
         category = "Automatic"
     )
     public static boolean autoGetGEXP = false;
@@ -448,7 +462,7 @@ public class HytilitiesConfig extends Vigilant {
 
     @Property(
         type = PropertyType.SWITCH, name = "Automatically Check Winstreak",
-        description = "Automatically check your winstreak after you win a Hypixel game. \\u00a7cRequires an API Key.",
+        description = "Automatically check your winstreak after you win a Hypixel game. \n§4 an API Key.",
         category = "Automatic"
     )
     public static boolean autoGetWinstreak = false;

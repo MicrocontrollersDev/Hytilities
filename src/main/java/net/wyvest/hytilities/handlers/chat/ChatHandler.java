@@ -68,8 +68,10 @@ public class ChatHandler {
         this.registerModule(new AutoGL());
         this.registerModule(new ConnectionStatusRemover());
         this.registerModule(new CurseOfSpamRemover());
+        this.registerModule(new SkyblockWelcomeRemover());
         this.registerModule(new QuestBlocker());
         this.registerModule(new GiftBlocker());
+        this.registerModule(new GrinchPresentsRemover());
         this.registerModule(new AutoVictory());
 
         this.registerDualModule(new ShoutBlocker());
